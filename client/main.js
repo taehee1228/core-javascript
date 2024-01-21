@@ -4,6 +4,6 @@ const a = 10
 
 console.log( )
 
-console.log('hello world!')
+console.log('자바스크립트!')
 
 
