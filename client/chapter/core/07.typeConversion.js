@@ -10,7 +10,7 @@
 const YEAR = 2024;
 
 console.log(typeof String(YEAR)); //명시적 형 변환
-console.log(YEAR + ''); // 암시적 형 변환
+console.log(YEAR + '');           // 암시적 형 변환
 // console.log(   (YEAR + '     '.trim())   );  // 암시적 형 변환
 
 
@@ -84,12 +84,14 @@ console.log(Boolean(money));
 console.log(Boolean(' '));
 console.log(Boolean(0));
 console.log(Boolean('0'));
+// 암시적 형변환 !!
+
 
 
 
 // 위에 나열한 것 이외의 것들 
 
-console.clear();
+
 
 //const value = Number(prompt('값을 입력해주세요'));
 //const value = prompt('값을 입력해주세요') * 1;
