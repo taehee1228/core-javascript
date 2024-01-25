@@ -37,7 +37,7 @@ const frontEndDev = [
 
   let i = 0;
 
-  while( i < 7){
+  while( i < 7 ){
 
     const value = frontEndDev[i];   // 값에 한번 더 담아준다 나중을 위해..
     //console.log(value);
@@ -48,7 +48,7 @@ const frontEndDev = [
 
   let l = frontEndDev.length;
 
-  while( l >= 0){
+  while( l >= 0 ){
 
     const value = frontEndDev[l];   // 값에 한번 더 담아준다 나중을 위해..
     console.log(value);
