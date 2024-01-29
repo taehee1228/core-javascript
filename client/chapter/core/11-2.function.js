@@ -167,7 +167,31 @@ cb(
   
   // 즉시 실행 함수 (표현)식
   // Immediately Invoked Function Expression
-  let IIFE;
+
+  // IIFE
+
+  // 캡슐화 (incapsulation)
+  
+  // 함수가 선언 됨과 동시에 실행되는 것을 말합니다.
+
+  // rename 가능 => closure
+
+  // import export => module 프로그래밍 (use strict)
+
+  const MASTER = (function (){
+
+    let uuid = 'asdas!asfddsfkjdfsjkf';
+
+    return {
+        getKey(){
+            return uuid;
+        },
+        setkey(value){
+            uuid = value
+        }
+    }
+
+  })();
 
 
 
