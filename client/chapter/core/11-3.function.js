@@ -36,9 +36,18 @@ const calculateTotal = function(moneyA, moneyB, moneyC, moneyD) {
 // forEach
 // args.forEach(item => total += item)
 
-   
-// reduce
+// function ask (question,yes,no) {
+//     if (confirm(question)) yes()
+//     else no()
+// }
 
+// ask(
+//     "동의?",
+//     function() {alert("어 보감");},
+//     function() {alert("안함?");}
+// )
+
+// reduce
 // args.reduce((acc,cur)=> acc + cur,0)
 
 
@@ -77,10 +86,47 @@ const creatUser = (name,age)=> ({name:name, age:age})
 /* 다음 함수를 작성해봅니다. -------------------------------------------------- */
   
 // pow(numeric: number, powerCount: number): number;
-let pow; 
+let pow = (numeric,powerCount)=> {
+
+    let result = 1;
+
+    for(let i = 0; i < powerCount; i++) result *= numeric;
+
+    return result;
+}
+
+console.log( pow(2,53) );
+
+
+// Array를 활용하여 만들기
+let powExpression = (numeric,powerCount) =>{
+
+    return Array(powerCount).fill(null).reduce((acc)=>{
+        return acc * numeric
+    },1)
+};
+
   
 // repeat(text: string, repeatCount: number): string;
-let repeat; 
+let repeat = (text,repeatCount)=> {
+    let result = '';
+    for(let i = 0; i < repeatCount; i++) result += text;
+    return result
+}; 
+
+console.log(repeat('hello\t',3));
+
+
+// Array 사용
+let repeatExpression = (text,repeatCount)=> {
+
+    return Array(repeatCount).fill(null).reduce((acc)=>{
+        return acc + text
+    },'')
+};
+
+console.log(repeatExpression('hello\t',3));
+
 
 
 // 정리하면

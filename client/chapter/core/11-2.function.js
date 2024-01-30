@@ -70,7 +70,7 @@ function calcTotal(moneyA, moneyB, moneyC, moneyD) {
     // arr.forEach ( item => total += item )
 
     // 배열의 메서드 ⭐️arry method⭐️
-    // forEach => 값을 변환하지 않음, 반목의 로직만 처리
+    // forEach => 값을 변환하지 않음, 반복의 로직만 처리
     // reduce => 값을 변환함. 모든걸 다 (배열,객체,문자,숫자)
 
     const map = arr.map(a => a * 2) // return 생략 가능
@@ -168,30 +168,92 @@ cb(
   // 즉시 실행 함수 (표현)식
   // Immediately Invoked Function Expression
 
-  // IIFE
+// IIFE
 
-  // 캡슐화 (incapsulation)
+// 캡슐화 (incapsulation)
+
+// 함수가 선언 됨과 동시에 실행되는 것을 말합니다.
+
+// rename 가능  => closure
+
+
+// import export  => module 프로그래밍 (use strict)
+
+const MASTER = (function(tiger){
+
+    let uuid = 'asdas!asfaj9ASFad';
   
-  // 함수가 선언 됨과 동시에 실행되는 것을 말합니다.
-
-  // rename 가능 => closure
-
-  // import export => module 프로그래밍 (use strict)
-
-  const MASTER = (function (){
-
-    let uuid = 'asdas!asfddsfkjdfsjkf';
-
+  
+    // console.log( tiger.name, tiger.alert(),tiger.prompt() );
+    
+  
     return {
-        getKey(){
-            return uuid;
-        },
-        setkey(value){
-            uuid = value
-        }
+      getKey(){
+        return uuid;
+      },
+      setKey(value){
+        uuid = value
+      }
     }
-
-  })();
+    
+  })(window);
+  
+  
+  
+  console.log( MASTER.getKey() );
+  
+  
+  
+  // import { css } from "../../utils/css.js";
+  
+  // css()
+  
+  
+  
+  // const css = (function(){
+    
+  //   function getStyle(node,prop){
+  
+  //     if(typeof node === 'string'){
+  //       node = document.querySelector(node)
+  //     }
+  //     if(typeof prop !== 'string'){
+  //       throw new Error('getStyle 함수의 두 번째 인수는 문자 타입 이어야 합니다.');
+  //     }
+  //     return getComputedStyle(node)[prop]
+  //   }
+   
+  //   function setStyle(node,prop,value){
+    
+  //     if(typeof node === 'string') node = document.querySelector(node);
+    
+  //     if(typeof prop !== 'string'){
+  //       throw new Error('setStyle 함수의 두 번째 인수는 문자 타입 이어야 합니다.');
+  //     }
+    
+  //     if(!value) throw new Error('setStyle 함수의 세 번째 인수는 필수 입력값 입니다.');
+    
+  //     node.style[prop] = value
+  //   }
+    
+  //   function css(node,prop,value){
+  
+  //     return (!value) ? getStyle(node,prop) : setStyle(node,prop,value)
+      
+      
+  //   }
+    
+  
+  //   return css;
+  
+  // })()
+  
+  
+  
+  // 개발 팀장 : 박가희 getStyle, setStyle, css 이거 만들었으니까 가져다 쓰세용 근데,,get,set 함수는 쓰지 말고 css 함수만 사용하셔도 됩니다.
+  
+  
+  // 개발 인턴 : 박지성  getStyle() 작동은 잘됨. 컨벤션 깨짐 
 
 
 
