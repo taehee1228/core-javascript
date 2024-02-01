@@ -114,7 +114,7 @@ function entries(obj){
 }
 
 entries(authUser) //['uuid','name','email']
-
+ 
 // 객체의 value만을 모아놓은 배열
 const valueList = Object.values(authUser);
 console.log(valueList);
