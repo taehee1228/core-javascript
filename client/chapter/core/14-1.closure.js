@@ -81,7 +81,7 @@ const handleClick = (()=>{  // 함수가 알아서 실행됨 -> iffe 즉시 실�
         }
         isClicked = !isClicked;
     }
-})()
+})() 
 
 first.addEventListener('click',handleClick)
 
