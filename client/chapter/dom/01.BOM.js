@@ -40,6 +40,51 @@ const urlParams = new URLSearchParams(location.search);
 const { platform, userAgent, language, onLine, geolocation } = navigator;
 
 
+
+// return 을 줘도 값을 못 뱉을때 비동기적인 데이터를 꺼내야 될 때
+// 시간이 오래 걸리는 가져오는 코드는 바로 가져오지 못한다
+// 1초의 기다림 이후의 실행 무조건 settime? ㄴㄴ
+// 그때 콜백 방식을 써보자
+function getCoords(success) {
+   
+    navigator.geolocation.getCurrentPosition((data)=>{
+        const {latitude:lat, longitude:long } = data.coords;
+
+        success({lat,long}) // getCoords로 밖으로 뺴기
+    })
+}
+
+getCoords((result)=>{   // success 함수를 지정
+    console.log(result);
+})
+// 사용자 환경에 따라 달라지는 것이니 setTimeout만 사용해서 무작정 타이머를 늦춘다기보다
+// 콜백을 통해서도 비동기 처리할 수 있는 것이다
+// 저 데이터를 콘솔말고 직접 활용하려면 계속 getCoords 함수를 호출
+
+// promise
+function getCoords(){
+
+    return new Promise((resolve, reject) => {
+      navigator.geolocation.getCurrentPosition((data)=>{
+        if(data){
+          const { latitude:lat, longitude:long } = data.coords;
+          resolve({lat,long})
+        }else{
+          reject({message:'error!'})
+        }
+      })
+    })
+    
+  }
+
+// 비디오 스트리밍 
+//   navigator.mediaDevices.getUserMedia({video:true})
+//   .then((stream)=>{
+//     console.log(stream);
+
+//     document.querySelector('#video').srcObject = stream
+//   })
+
 /* Screen 객체 ----------------------------------------------------------- */
 
 const { width, height, availWidth, availHeight, orientation } = screen;
