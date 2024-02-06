@@ -9,9 +9,9 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-.first {
+/* .first {
     background-color: orange;
-}
+} */
 
 .userCard{
     border: 1px solid black;
@@ -27,4 +27,8 @@ h1 {
       background-color: gray;
     }
   
+  }
+
+  #idField.is-active{
+    background-color: red;
   }

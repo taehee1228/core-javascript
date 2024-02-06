@@ -22,13 +22,13 @@ let friends = '경민 보미 가희 재훈 도희 남동 원명 태희 진욱'.s
 friends[7] = '효재'
 
 // 배열 요소 추가
-let unshift = friends.unshift('태희');
-let push = friends.push('태희');
+let unshift = friends.unshift('태희');  // 맨 앞으로 추가
+let push = friends.push('태희');    // 맨 뒤로 추가
 
 
 // 배열 요소 제거
-let shift = friends.shift();
-let pop = friends.pop();
+let shift = friends.shift();    // 맨 앞에 삭제
+let pop = friends.pop();    // 맨 뒤에 삭제
 
 
 // 큐(queue) vs. 스택(stack)

@@ -85,7 +85,7 @@ let toUpperCase = message.toUpperCase();
 
 
 // 텍스트 이름 변환 유틸리티 함수
-function toCamelCase(string) {
+function toCamelCase(string) {  // 어떤 값이든 카멜케이스로
     return string.replace(/(\s|-|_)+./g, ($1) => $1.trim().replace(/(-|_)+/, '').toUpperCase())
   }
   

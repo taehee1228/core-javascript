@@ -62,20 +62,20 @@ getCoords((result)=>{   // success 함수를 지정
 // 저 데이터를 콘솔말고 직접 활용하려면 계속 getCoords 함수를 호출
 
 // promise
-function getCoords(){
+// function getCoords(){
 
-    return new Promise((resolve, reject) => {
-      navigator.geolocation.getCurrentPosition((data)=>{
-        if(data){
-          const { latitude:lat, longitude:long } = data.coords;
-          resolve({lat,long})
-        }else{
-          reject({message:'error!'})
-        }
-      })
-    })
+//     return new Promise((resolve, reject) => {
+//       navigator.geolocation.getCurrentPosition((data)=>{
+//         if(data){
+//           const { latitude:lat, longitude:long } = data.coords;
+//           resolve({lat,long})
+//         }else{
+//           reject({message:'error!'})
+//         }
+//       })
+//     })
     
-  }
+//   }
 
 // 비디오 스트리밍 
 //   navigator.mediaDevices.getUserMedia({video:true})
