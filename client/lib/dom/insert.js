@@ -10,7 +10,7 @@ function insertBefore(node,text){
     node.insertAdjacentHTML('afterbegin',text)
   }
   
-  function insertLast(node,text){
+  function insertLast(node,text){   // 가장 많이 쓸꺼임
     if(typeof node === 'string') node = getNode(node);
   
     node.insertAdjacentHTML('beforeend',text)

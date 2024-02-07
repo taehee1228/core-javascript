@@ -30,8 +30,7 @@ first.style.background = 'orange';
 
 console.log(getComputedStyle(first)['backgroundColor']);
 
-
-
 /* 계산된 스타일 읽기 ------------------------------------------------------- */
 
 // - getComputedStyle(element, [pseudoElement]) `읽기 전용`
+
