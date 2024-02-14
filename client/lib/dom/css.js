@@ -3,7 +3,7 @@
 /*                      css                     */
 /* -------------------------------------------- */
 
-
+import { getNode } from "./getNode";
 function getCss(node,prop){
   
   if(typeof node === 'string') node = getNode(node);

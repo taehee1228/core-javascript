@@ -1,4 +1,4 @@
-
+import { getNode } from "./getNode";
 function bindEvent(node,type,handler){
 
   if(typeof node === 'string') node = getNode(node);
