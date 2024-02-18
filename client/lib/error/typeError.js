@@ -1,3 +1,8 @@
+
+
+
+
+
 export function typeError(message){
-    throw new TypeError(message);
-  }
+  throw new TypeError(message);
+}

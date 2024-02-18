@@ -1,10 +1,13 @@
-import { getNode } from "./getNode";
-function bindEvent(node,type,handler){
+
+import { getNode } from "./getNode.js";
+
+
+export function bindEvent(node,type,handler){
 
   if(typeof node === 'string') node = getNode(node);
 
   node.addEventListener(type,handler);
 
-  return () => node.removeEventListener(type,handler);
+  return () => node.removeEventListener(type,handler)
 
 }

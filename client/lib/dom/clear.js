@@ -1,11 +1,18 @@
-import { getNode } from "./getNode";
 
-export function clearContents(node){
-    if(typeof node == 'string') node = getNode(node);
+import { getNode } from "./getNode.js";
 
-    if(node.tagName == 'INPUT' || node.tagName == 'TEXTAREA'){
-        node.value = ''
-        return;
-    }
-    node.textContent = ''
+
+ function clearContents(node){
+  if(typeof node === 'string') node = getNode(node);
+
+  if(node.nodeName === 'INPUT' || node.nodeName === 'TEXTAREA'){
+    node.value = ''
+    return;
+  }
+
+  node.textContent = ''
 }
+
+
+
+export default clearContents
