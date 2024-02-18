@@ -92,7 +92,7 @@ function useState(initValue){
 
     function read(){
         return value;
-    }
+    } 
 
     function write(newValue){
         value = newValue;
